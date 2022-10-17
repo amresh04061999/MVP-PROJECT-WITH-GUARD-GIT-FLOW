@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/base/_index.scss";
+@import "assets/vander/index";
+
+// globle
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
+}
