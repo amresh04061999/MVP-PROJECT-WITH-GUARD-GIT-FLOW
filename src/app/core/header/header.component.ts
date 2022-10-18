@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DialogService } from 'src/app/shared/dialog.service';
+import { UserFormPresentationComponent } from 'src/app/users/user-form-container/user-form-presentation/user-form-presentation.component';
 
 @Component({
   selector: 'app-header',
@@ -6,13 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  constructor(private dilogservices: DialogService) { }
 
   ngOnInit(): void {
   }
-
-  onSignupOpen(){
-    
+  public onSignupOpen() {
+    this.dilogservices.open(UserFormPresentationComponent)
   }
 }

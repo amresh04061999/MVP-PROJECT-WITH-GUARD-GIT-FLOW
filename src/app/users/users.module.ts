@@ -7,6 +7,8 @@ import { UserFormContainerComponent } from './user-form-container/user-form-cont
 import { UserFormPresentationComponent } from './user-form-container/user-form-presentation/user-form-presentation.component';
 import { UserListContainerComponent } from './user-list-container/user-list-container.component';
 import { UserListPresentationComponent } from './user-list-container/user-list-presentation/user-list-presentation.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
@@ -15,11 +17,13 @@ import { UserListPresentationComponent } from './user-list-container/user-list-p
     UserFormContainerComponent,
     UserFormPresentationComponent,
     UserListContainerComponent,
-    UserListPresentationComponent
+    UserListPresentationComponent,
+
   ],
   imports: [
     CommonModule,
-    UsersRoutingModule
+    UsersRoutingModule,
+
   ]
 })
 export class UsersModule { }

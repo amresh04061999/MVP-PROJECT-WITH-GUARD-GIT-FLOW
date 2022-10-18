@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DilogOpenService } from './dilog-open.service';
-
-
+import { OverlayModule } from '@angular/cdk/overlay';
+import { DialogService } from './dialog.service';
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    OverlayModule
   ],
-  providers:[DilogOpenService]
+  providers: [DialogService]
 })
 export class SharedModule { }
