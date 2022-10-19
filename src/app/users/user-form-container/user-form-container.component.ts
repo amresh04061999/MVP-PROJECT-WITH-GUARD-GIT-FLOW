@@ -12,4 +12,8 @@ export class UserFormContainerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public user(e:any){
+console.log('get',e);
+
+  }
 }

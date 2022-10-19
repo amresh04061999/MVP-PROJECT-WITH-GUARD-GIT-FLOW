@@ -26,16 +26,11 @@ export class DialogService {
       panelClass: 'overlay-panel',
       width: 600,
     });
-
     // Close the dialog using backdropClick()
     overlayRef.backdropClick().subscribe(() => {
       overlayRef.detach()
     })
-
     const portal = new ComponentPortal(component);
     overlayRef.attach(portal);
-
-
   }
-
 }
