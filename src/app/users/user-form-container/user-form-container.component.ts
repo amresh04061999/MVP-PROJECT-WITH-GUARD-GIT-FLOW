@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subject } from 'rxjs';
+import { UserService } from '../service/user.service';
+import { User } from '../user.model';
 
 @Component({
   selector: 'app-user-form-container',
@@ -7,13 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserFormContainerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private usersevices: UserService) { }
 
   ngOnInit(): void {
   }
 
-  public user(e:any){
-console.log('get',e);
-
+  /**
+   * Add user Deatils in json server
+   * @param user
+   */
+  public addUser(user: User): void {
+    this.usersevices.CreateUser(user).subscribe(response => {
+      console.log(response)
+    });
   }
 }

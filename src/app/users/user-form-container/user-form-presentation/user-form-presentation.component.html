@@ -1,44 +1,25 @@
-<form>
+<!--============================== form start =========================== -->
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
   <h1>USER FORM</h1>
   <div class="mb-3">
     <label for="username" class="form-label">Username</label>
-    <input type="text" class="form-control" id="username" placeholder="Enter Your Username">
+    <input type="text" class="form-control" id="username" placeholder="Enter Your Username" formControlName="username">
   </div>
   <div class="mb-3">
     <label for="email" class="form-label">Email</label>
-    <input type="email" class="form-control" id="username" placeholder="Enter Your email ">
+    <input type="email" class="form-control" id="email" placeholder="Enter Your email " formControlName="email">
   </div>
   <div class="mb-3">
-    <label for="email" class="form-label">Phone No</label>
-    <input type="email" class="form-control" id="username" placeholder="Enter Your Phone No">
+    <label for="phoneno" class="form-label">Phone No</label>
+    <input type="number" class="form-control" id="phoneno" placeholder="Enter Your Phone No" formControlName="phoneno">
   </div>
-  <fieldset class="form-group">
-    <div class="row">
-      <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
-      <div class=" d-flex">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="male" checked>
-          <label class="form-check-label" for="gridRadios1">
-            Male
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="female">
-          <label class="form-check-label" for="gridRadios2">
-            Fimale
-          </label>
-        </div>
-      </div>
-    </div>
-  </fieldset>
   <div class="mb-3">
     <label for="password" class="form-label">Password</label>
-    <input type="password" class="form-control" id="password" placeholder="Enter Your Password">
+    <input type="password" class="form-control" id="password" placeholder="Enter Your Password"
+      formControlName="password">
   </div>
-  <div class=" mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="button" class="btn btn-primary" (click)="onSubmit()">Submit</button>
-  <button type="submit" class="btn btn-danger  ms-3">Close</button>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="button" class="btn btn-danger  ms-3" (click)="onclose()">Close</button>
 </form>
+<!--============================== form end =========================== -->
