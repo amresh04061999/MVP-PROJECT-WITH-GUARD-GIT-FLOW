@@ -1,24 +1,21 @@
-import { trigger } from '@angular/animations';
 import { Overlay, ComponentType } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { Injectable, } from '@angular/core';
 import { Subject } from 'rxjs';
-import { UserFormPresenterService } from '../users/user-form-container/user-form-presenter/user-form-presenter.service';
+
 
 
 @Injectable()
 export class DialogService {
   overlayRef: any;
-  public close: boolean;
-  constructor(private overlay: Overlay) {
-    this.close = false
+  public close :Subject<boolean>
+  constructor(private overlay: Overlay,) {
+      this.close=new Subject();
   }
-
-
   /**
    * Open a custom component in an overlay
    */
-  open<T>(component: ComponentType<T>) {
+  open<T>(component: ComponentType<T>,) {
     // Globally centered position strategy
     const positionStrategy = this.overlay
       .position()
@@ -40,8 +37,11 @@ export class DialogService {
     overlayRef.backdropClick().subscribe(() => {
       overlayRef.detach()
     })
+     this.close.subscribe(res=>{
+         overlayRef.detach()
+    })
   }
-
+  
 
 }
 

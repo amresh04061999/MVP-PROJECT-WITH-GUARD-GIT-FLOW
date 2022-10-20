@@ -13,6 +13,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
   public onSignupOpen() {
-    this.dilogservices.open(UserFormContainerComponent)
-  }
+  this.dilogservices.open(UserFormContainerComponent)
+ }
 }
+  
+ 
+
