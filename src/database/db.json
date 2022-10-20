@@ -76,6 +76,48 @@
       "email": "axax",
       "phoneno": 1234567898,
       "password": "xaxa"
+    },
+    {
+      "id": 12,
+      "username": "",
+      "email": "",
+      "phoneno": "",
+      "password": ""
+    },
+    {
+      "id": 13,
+      "username": "",
+      "email": "",
+      "phoneno": "",
+      "password": ""
+    },
+    {
+      "id": 14,
+      "username": "amresh.prasad",
+      "email": "amresh1098@gmail.com",
+      "phoneno": 1234567898,
+      "password": "wdwd"
+    },
+    {
+      "id": 15,
+      "username": "",
+      "email": "",
+      "phoneno": "",
+      "password": ""
+    },
+    {
+      "id": 16,
+      "username": "zzz",
+      "email": "zz",
+      "phoneno": 1234567898,
+      "password": "zz"
+    },
+    {
+      "id": 17,
+      "username": "xx",
+      "email": "xx",
+      "phoneno": 1234567898,
+      "password": "xxxxxxx"
     }
   ]
 }

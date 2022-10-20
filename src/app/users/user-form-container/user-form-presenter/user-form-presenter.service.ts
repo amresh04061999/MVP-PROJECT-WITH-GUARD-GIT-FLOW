@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable, Output } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { User } from '../../user.model';
 
@@ -8,13 +8,8 @@ import { User } from '../../user.model';
 )
 export class UserFormPresenterService {
   public add: Subject<User>;
-  @Output() public close: EventEmitter<boolean>;
   constructor(private fb: FormBuilder) {
     this.add = new Subject();
-    this.close = new EventEmitter()
-
-
-
   }
   /**
    * create form builder
@@ -35,12 +30,13 @@ export class UserFormPresenterService {
    * @param form
    */
   public saveUser(form: FormGroup): void {
-    let user: User = new User();
-    user = form.getRawValue();
-    // console.log(user);
-    this.add.next(user);
+    if(form.valid){
+      let user: User = new User();
+      user = form.getRawValue();
+      this.add.next(user);
+    }
+   
   }
-  public closeComponent() {
-    this.close.emit()
-  }
+
+    
 }

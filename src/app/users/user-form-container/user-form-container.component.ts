@@ -14,7 +14,6 @@ export class UserFormContainerComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
   /**
    * Add user Deatils in json server
    * @param user
