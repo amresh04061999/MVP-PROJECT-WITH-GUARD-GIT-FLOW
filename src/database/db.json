@@ -1,0 +1,81 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "username": "q",
+      "email": "q",
+      "phoneno": 1234567898,
+      "password": "q"
+    },
+    {
+      "id": 2,
+      "username": "amresh",
+      "email": "amresh1098@gmail.com",
+      "phoneno": 1234567898,
+      "password": "12345"
+    },
+    {
+      "id": 3,
+      "username": "fdvdf",
+      "email": "vfv",
+      "phoneno": 1234567898,
+      "password": "fvf"
+    },
+    {
+      "id": 4,
+      "username": "cc",
+      "email": "ccc",
+      "phoneno": 1234567898,
+      "password": "cssc"
+    },
+    {
+      "id": 5,
+      "username": "csc",
+      "email": "amresh1098@gmail.com",
+      "phoneno": 1234567898,
+      "password": "scsc"
+    },
+    {
+      "id": 6,
+      "username": "dcdc",
+      "email": "cdc",
+      "phoneno": 1234567898,
+      "password": "cd"
+    },
+    {
+      "id": 7,
+      "username": "dvdv",
+      "email": "ddv",
+      "phoneno": 1234567898,
+      "password": "dvvd"
+    },
+    {
+      "id": 8,
+      "username": "z",
+      "email": "z",
+      "phoneno": 35345435,
+      "password": "zxzx"
+    },
+    {
+      "id": 9,
+      "username": "xaxa",
+      "email": "axax",
+      "phoneno": 1234567898,
+      "password": "xaxa"
+    },
+    {
+      "id": 10,
+      "username": "xaxa",
+      "email": "axax",
+      "phoneno": 1234567898,
+      "password": "xaxa"
+    },
+    {
+      "id": 11,
+      "username": "xaxa",
+      "email": "axax",
+      "phoneno": 1234567898,
+      "password": "xaxa"
+    }
+  ]
+}

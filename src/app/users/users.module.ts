@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { UsersRoutingModule } from './users-routing.module';
-import { UsersComponent } from './users.component';
 import { UserFormContainerComponent } from './user-form-container/user-form-container.component';
 import { UserFormPresentationComponent } from './user-form-container/user-form-presentation/user-form-presentation.component';
 import { UserListContainerComponent } from './user-list-container/user-list-container.component';
 import { UserListPresentationComponent } from './user-list-container/user-list-presentation/user-list-presentation.component';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserFormPresenterService } from './user-form-container/user-form-presenter/user-form-presenter.service';
+import { HttpClientModule } from '@angular/common/http';
+import { UserService } from './service/user.service';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
   declarations: [
-    UsersComponent,
     UserFormContainerComponent,
     UserFormPresentationComponent,
     UserListContainerComponent,
@@ -23,7 +23,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   imports: [
     CommonModule,
     UsersRoutingModule,
-
-  ]
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+    SharedModule
+  ],
+  providers: [UserService]
 })
 export class UsersModule { }

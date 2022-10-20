@@ -2,12 +2,19 @@ import { trigger } from '@angular/animations';
 import { Overlay, ComponentType } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { Injectable, } from '@angular/core';
+import { Subject } from 'rxjs';
+import { UserFormPresenterService } from '../users/user-form-container/user-form-presenter/user-form-presenter.service';
 
 
 @Injectable()
 export class DialogService {
   overlayRef: any;
-  constructor(private overlay: Overlay) { }
+  public close: boolean;
+  constructor(private overlay: Overlay) {
+    this.close = false
+  }
+
+
   /**
    * Open a custom component in an overlay
    */
@@ -26,11 +33,17 @@ export class DialogService {
       panelClass: 'overlay-panel',
       width: 600,
     });
+
+    const portal = new ComponentPortal(component);
+    const componentref = overlayRef.attach(portal);
     // Close the dialog using backdropClick()
     overlayRef.backdropClick().subscribe(() => {
       overlayRef.detach()
     })
-    const portal = new ComponentPortal(component);
-    overlayRef.attach(portal);
   }
+
+
 }
+
+
+
