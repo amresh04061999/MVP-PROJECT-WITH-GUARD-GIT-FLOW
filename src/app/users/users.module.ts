@@ -10,6 +10,7 @@ import { UserFormPresenterService } from './user-form-container/user-form-presen
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './service/user.service';
 import { SharedModule } from '../shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { SharedModule } from '../shared/shared.module';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ],
   providers: [UserService]
 })

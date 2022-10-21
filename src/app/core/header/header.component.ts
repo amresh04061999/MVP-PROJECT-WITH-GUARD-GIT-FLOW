@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DialogService } from 'src/app/shared/dialog.service';
 import { UserFormContainerComponent } from 'src/app/users/user-form-container/user-form-container.component';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -8,14 +9,22 @@ import { UserFormContainerComponent } from 'src/app/users/user-form-container/us
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  constructor(private dilogservices: DialogService) { }
+  public userProfileName: string
+  constructor(private dilogservices: DialogService,
+    private authServices: AuthService) {
+    this.userProfileName = ''
+  }
 
   ngOnInit(): void {
+    this.authServices.profileName.subscribe(res => {
+      this.userProfileName = res
+    })
   }
   public onSignupOpen() {
-  this.dilogservices.open(UserFormContainerComponent)
- }
+    this.dilogservices.open(UserFormContainerComponent)
+  }
+
 }
-  
- 
+
+
 

@@ -118,6 +118,34 @@
       "email": "xx",
       "phoneno": 1234567898,
       "password": "xxxxxxx"
+    },
+    {
+      "id": 18,
+      "username": "sdcsdc",
+      "email": "amresh1098@gmail.com",
+      "phoneno": 1234567898,
+      "password": "scac"
+    },
+    {
+      "id": 19,
+      "username": "amresh",
+      "email": "amresh1098@gmail.com",
+      "phoneno": 1234567898,
+      "password": "123"
+    },
+    {
+      "id": 20,
+      "username": "manish",
+      "email": "manish@gmail.com",
+      "phoneno": 1234567898,
+      "password": "1234"
+    },
+    {
+      "id": 21,
+      "username": "ravi",
+      "email": "amresh1098@gmail.com",
+      "phoneno": 1234567898,
+      "password": "123"
     }
   ]
 }

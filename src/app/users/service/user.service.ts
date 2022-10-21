@@ -17,4 +17,7 @@ export class UserService {
     return this._http.post<User>(`${this.baseURL}user`, user);
   }
 
+  public getUser(): Observable<User[]> {
+    return this._http.get<User[]>(`${this.baseURL}user`);
+  }
 }
