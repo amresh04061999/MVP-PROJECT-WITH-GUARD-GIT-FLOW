@@ -5,6 +5,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { UsersModule } from '../users/users.module';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -14,7 +15,8 @@ import { UsersModule } from '../users/users.module';
   imports: [
     CommonModule,
     RouterModule,
-    UsersModule
+    UsersModule,
+    ReactiveFormsModule
   ],
   exports: [
     HeaderComponent,

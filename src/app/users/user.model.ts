@@ -5,8 +5,8 @@ export class User {
     public email?: string,
     public phoneno?: number,
     public password?: string,
-  ){
+  ) {
 
   }
- 
+
 }
