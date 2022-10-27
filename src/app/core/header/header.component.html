@@ -1,9 +1,21 @@
-<header class="bg-light p-2">
+<header class="bg-light p-2" *ngIf="header">
   <div class="d-flex justify-content-between ">
     <a class="navbar-brand ms-4 ">
-      <h3>HEADER</h3>
+      <h3>Welcome <span>{{userProfileName}}</span></h3>
     </a>
-    <span>{{userProfileName}}</span>
-    <button type="button" class="btn btn-primary" (click)="onSignupOpen()">SIGNUP</button>
+    <ul class="d-flex">
+      <li>home</li>
+      <li>home</li>
+      <li>home</li>
+    </ul>
+    <button type="button" class="btn btn-primary" (click)="logout()">logout</button>
+  </div>
+</header>
+<header class="bg-light p-2" *ngIf="!header">
+  <div class="d-flex justify-content-between ">
+    <a class="navbar-brand ms-4 ">
+      <h3>NotFound</h3>
+    </a>
+    <button type="button" class="btn btn-primary" (click)="logout()">login</button>
   </div>
 </header>

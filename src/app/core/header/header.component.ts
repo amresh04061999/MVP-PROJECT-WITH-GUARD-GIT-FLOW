@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { DialogService } from 'src/app/shared/dialog.service';
-import { UserFormContainerComponent } from 'src/app/users/user-form-container/user-form-container.component';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
+import { flatMap } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -9,19 +9,32 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @Output() headerNone: EventEmitter<boolean>
   public userProfileName: string
-  constructor(private dilogservices: DialogService,
+  header: any
+  constructor(private router: Router,
     private authServices: AuthService) {
     this.userProfileName = ''
+    this.headerNone = new EventEmitter()
   }
-
   ngOnInit(): void {
     this.authServices.profileName.subscribe(res => {
       this.userProfileName = res
     })
+    let auth = localStorage.getItem('isAuthentication')
+    if (auth) {
+      this.header = true
+    } else {
+      this.header = false
+    }
   }
-  public onSignupOpen() {
-    this.dilogservices.open(UserFormContainerComponent)
+  /**
+   * logout user
+   */
+  public logout() {
+    localStorage.clear();
+    this.router.navigate(['login'])
+    this.headerNone.emit(false)
   }
 
 }

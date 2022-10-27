@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { UsersModule } from '../users/users.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AuthGuard } from './auth/auth.guard';
+import { LoginGuard } from './auth/login.guard';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -22,6 +24,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     LoginFormComponent,
     FooterComponent
-  ]
+  ],
+  providers: [AuthGuard, LoginGuard]
 })
 export class CoreModule { }

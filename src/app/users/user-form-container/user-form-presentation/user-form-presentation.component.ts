@@ -12,13 +12,13 @@ import { UserFormPresenterService } from '../user-form-presenter/user-form-prese
 })
 export class UserFormPresentationComponent implements OnInit {
   public userForm: FormGroup
-  public isSubmited=false
+  public isSubmited = false
   @Output() public saveUser: EventEmitter<User>;
   @Output() public addData: EventEmitter<User>;
- 
+
   constructor(
     private UserFormPresenterServices: UserFormPresenterService,
-    private dialogservise:DialogService
+    private dialogservise: DialogService
 
   ) {
 
@@ -39,8 +39,8 @@ export class UserFormPresentationComponent implements OnInit {
   /**
    * Onsubmite save user details
    */
-  public onSubmit(){
-    if(this.isSubmited=true){
+  public onSubmit() {
+    if (this.isSubmited = true) {
       this.UserFormPresenterServices.saveUser(this.userForm);
       this.dialogservise.close.next(true)
     }
@@ -49,13 +49,13 @@ export class UserFormPresentationComponent implements OnInit {
    * close model function
    */
   public onclose() {
-  this.dialogservise.close.next(true)
+    this.dialogservise.close.next(true)
   }
 
-    // select data employe form
-    get userform(): { [key: string]: AbstractControl } {
-      return this.userForm.controls;
-    }
+  // select data employe form
+  get userform(): { [key: string]: AbstractControl } {
+    return this.userForm.controls;
+  }
 
 
 }

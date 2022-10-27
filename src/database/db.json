@@ -78,32 +78,11 @@
       "password": "xaxa"
     },
     {
-      "id": 12,
-      "username": "",
-      "email": "",
-      "phoneno": "",
-      "password": ""
-    },
-    {
-      "id": 13,
-      "username": "",
-      "email": "",
-      "phoneno": "",
-      "password": ""
-    },
-    {
       "id": 14,
       "username": "amresh.prasad",
       "email": "amresh1098@gmail.com",
       "phoneno": 1234567898,
       "password": "wdwd"
-    },
-    {
-      "id": 15,
-      "username": "",
-      "email": "",
-      "phoneno": "",
-      "password": ""
     },
     {
       "id": 16,
@@ -144,6 +123,13 @@
       "id": 21,
       "username": "ravi",
       "email": "amresh1098@gmail.com",
+      "phoneno": 1234567898,
+      "password": "123"
+    },
+    {
+      "id": 22,
+      "username": "manish",
+      "email": "manish@gmail.com",
       "phoneno": 1234567898,
       "password": "123"
     }

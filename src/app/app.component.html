@@ -1,6 +1,7 @@
 <div class=" h-100 d-flex flex-column">
-  <div class="border border-1 border-primary">
-    <app-header></app-header>
+  <div class="border border-1 border-primary" *ngIf="header">
+    <app-header (headerNone)="logout($event)"></app-header>
+    <!-- (headerNone)="logout($event)" -->
   </div>
   <div class="flex-grow-1">
     <router-outlet></router-outlet>
